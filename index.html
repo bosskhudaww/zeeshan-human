@@ -29,20 +29,21 @@
       margin-bottom: 20px;
       display: flex;
       justify-content: center;
-      min-height: 65px;
+      min-height: 70px; /* Space reserved for icon */
     }
     #loader {
       border: 3px solid #f3f3f3;
       border-top: 3px solid #0095f6;
       border-radius: 50%;
-      width: 45px;
-      height: 45px;
+      width: 40px;
+      height: 40px;
       animation: spin 1s linear infinite;
     }
+    /* Original Meta Badge Styling */
     .verified-icon {
       display: none;
-      width: 65px;
-      height: 65px;
+      width: 70px;
+      height: 70px;
     }
     h1 {
       font-size: 22px;
@@ -57,7 +58,7 @@
       margin-bottom: 25px;
     }
     .btn {
-      display: none;
+      display: none; 
       background-color: #0095f6;
       color: white !important;
       text-decoration: none;
@@ -65,14 +66,32 @@
       border-radius: 8px;
       font-weight: 600;
       font-size: 14px;
+      transition: background 0.2s;
+      border: none;
       width: 100%;
       box-sizing: border-box;
-      border: none;
       cursor: pointer;
+    }
+    .btn:hover {
+      background-color: #1877f2;
     }
     @keyframes spin {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
     .footer-meta {
-      margin-top:
+      margin-top: 25px;
+      font-size: 11px;
+      color: #c7c7c7;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="badge-wrapper">
+      <div id="loader"></div>
+      
+      <svg id="successIcon" class="verified-icon" viewBox="0 0 24 24" xmlns="
